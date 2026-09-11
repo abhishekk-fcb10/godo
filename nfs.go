@@ -132,8 +132,7 @@ type Nfs struct {
 	MountPath string `json:"mount_path"`
 	// PerformanceTier is the performance tier of the NFS share
 	PerformanceTier string `json:"performance_tier"`
-	// ManagerURN associates the share with a managing resource (e.g.
-	// do:kubernetes:<cluster-uuid> for DOKS-managed shares).
+	// ManagerURN associates the share with the resource that manages it
 	ManagerURN string `json:"manager_urn,omitempty"`
 	// AccessPoints is the list of access points configured for the NFS share.
 	AccessPoints []*NfsAccessPoint `json:"access_points,omitempty"`
