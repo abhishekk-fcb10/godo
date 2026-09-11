@@ -43,7 +43,7 @@ func TestNfsCreateSizeValidationIsServerSide(t *testing.T) {
 	setup()
 	defer teardown()
 
-	// godo no longer enforces a client-side size floor; the API rejects
+	// The client does not enforce a size floor; the API rejects
 	// below-floor sizes and the error must pass through.
 	mux.HandleFunc("/v2/nfs", func(w http.ResponseWriter, r *http.Request) {
 		assert.Equal(t, http.MethodPost, r.Method)
